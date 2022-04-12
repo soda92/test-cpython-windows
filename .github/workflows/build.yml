@@ -17,7 +17,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
         with:
-          repository: 'https://github.com/python/cpython'
+          repository: 'python/cpython'
 
       - name: Disable preinstalled python
         run: Remove-Item C:\Windows\py.exe
@@ -40,7 +40,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
         with:
-          repository: 'https://github.com/python/cpython'
+          repository: 'python/cpython'
 
       - name: Register MSVC problem matcher
         run: echo "::add-matcher::.github/problem-matchers/msvc.json"

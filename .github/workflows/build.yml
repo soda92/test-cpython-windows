@@ -15,8 +15,8 @@ jobs:
 
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
-      - with:
+        uses: actions/checkout@v3
+        with:
         repository: https://github.com/python/cpython.git
 
       - name: Disable preinstalled python
@@ -38,8 +38,8 @@ jobs:
       IncludeUwp: 'true'
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
-      - with:
+        uses: actions/checkout@v3
+        with:
         repository: https://github.com/python/cpython.git
 
       - name: Register MSVC problem matcher

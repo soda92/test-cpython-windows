@@ -31,7 +31,8 @@ jobs:
 
       - name: Checking dll
         run: |
-          iwr -useb get.scoop.sh | iex
+          iwr -useb get.scoop.sh -outfile 'install.ps1'
+          .\install.ps1 -RunAsAdmin
           scoop install msys2
           msys2 -mingw64 -c "ldd /a/test-cpython-windows/test-cpython-windows/PCbuild/amd64/python.exe"
 

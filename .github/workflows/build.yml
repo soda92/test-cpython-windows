@@ -20,6 +20,12 @@ jobs:
           repository: 'python/cpython'
 
       - name: Disable preinstalled python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '2.7'
+          architecture: x64
+
+      - name: Disable preinstalled python
         run: Remove-Item C:\Windows\py.exe
 
       - name: Build CPython
@@ -44,6 +50,12 @@ jobs:
 
       - name: Register MSVC problem matcher
         run: echo "::add-matcher::.github/problem-matchers/msvc.json"
+
+      - name: Disable preinstalled python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '2.7'
+          architecture: x64
 
       - name: Disable preinstalled python
         run: Remove-Item C:\Windows\py.exe

@@ -40,3 +40,9 @@ jobs:
         run: .\python.bat -m test.pythoninfo
       # - name: Tests
       #   run: .\PCbuild\rt.bat -p x64 -d -q -uall -u-cpu -rwW --slowest --timeout=1200 -j0
+
+      - name: download built artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: pythonx64
+          path: PCbuild/amd64
